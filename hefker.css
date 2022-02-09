@@ -1,0 +1,153 @@
+@keyframes right_answer_produce{
+    0%{
+        background-color: none;
+    }
+    50%{
+        background-color: rgba(31, 206, 31, 0.6);
+    }
+    100%{
+        background-color: none;
+    }
+}
+
+@keyframes wrong_answer_produce{
+    0%{
+        background-color: none;
+    }
+    50%{
+        background-color: rgba(228, 19, 19, 0.6);
+    }
+    100%{
+        background-color: none;
+    }
+}
+
+/* -- hefker game -- */
+div.hefker_game{
+    display: none;
+    width: 1002px;
+    height: 513px;
+    top: 30px;
+    left: 3px;
+}
+
+img.fruit{
+    width: 30px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+img.root{
+    width: 30px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+img.IN{
+    width: 30px;
+    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+    transform: translate(0px, -15px);
+}
+
+img.grow{
+    animation: grow;
+    animation-iteration-count: 1;
+    animation-duration: 8s;
+}
+
+img.fall{
+    animation: fall;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+}
+
+img.wrong_answer_prod{
+    animation: wrong_answer_produce;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+img.right_answer_prod{
+    animation: right_answer_produce;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+img.arrow{
+    top: 450px;
+    left: 250px;
+    width: 70px;
+}
+img.arrow:hover{
+    transform: scale(1.1);
+    filter: hue-rotate(-40deg) saturate(300%);
+}
+img#right_arrow{
+    left: 650px;
+}
+div.player_crate{
+    width: 100px;
+    top: 390px;
+}
+img.player_crate_inner{
+    z-index: 0;
+}
+img.player_crate_outer{
+    z-index: 3;
+}
+img.target_for_capture{
+    background-image: radial-gradient(yellow, orange);
+    border-radius: 100%;
+    border: 5px solid orange;
+    width: 65px;
+    min-height: 65px;
+    top: 437px;
+    left: 420px;
+}
+
+img.checked_answer{
+    width: 50px;
+    top: 425px;
+    left: 80px;
+}
+
+img.mouse_lair_hefker{
+    top: 460px;
+    width: 80px;
+    left: 20px;
+}
+
+img.whos_that_produce{
+    top: 450px;
+    width: 35px;
+    filter: brightness(0);
+}
+
+img.hefker_title{
+    z-index: 4;
+    width: 550px;
+    left: 225px;
+    top: -50px;
+}
+
+img.hefker_sign{
+    top: 325px;
+    left: 30px;
+    width: 90px;
+}
+
+span.instructions{
+    direction: rtl;
+    position: absolute;
+    display: block;
+    top: 188px;
+    right: 260px;
+    width: 560px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 1s;
+}

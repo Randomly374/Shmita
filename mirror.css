@@ -1,0 +1,18 @@
+div.mirror{
+    width: 80px;
+    height: 145px;
+    top: 256px;
+    left: 454px;
+}
+
+div.mirror_inner{
+    width: 74px;
+    height: 139px;
+    top: 3px;
+    left: 3px;
+    overflow: hidden;
+}
+.mirror_image{
+    transform: scale(0.8) rotateY(180deg) translate(40px, -40px);
+    opacity: 0.8;
+}

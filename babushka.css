@@ -1,0 +1,72 @@
+
+img#babushka_background{
+    width: 100%;
+}
+div#babushka_game{
+    display: none;
+    overflow: hidden;
+    width: 1002px;
+    height: 590px;
+    left: 0px;
+}
+
+div.ADIV{
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    direction: rtl;
+    color: yellow;
+    background-color: yellow;
+    height: 56px; 
+    width: 372px;
+    opacity: 0.3;
+    border-radius: 40px;
+}
+div#ADIV0{
+    top: 380px; 
+    left: 104px;
+}
+div#ADIV1{
+    top: 380px;  
+    left: 525px;
+}
+div#ADIV2{
+    top: 472px; 
+    left: 104px;
+}
+div#ADIV3{
+    top: 472px; 
+    left: 525px;
+}
+
+img.babushka_prize{
+    position: absolute;
+    top: 20px;
+    width: 34px;
+    opacity: 0;
+}
+img#babushka_prize0{
+    left: 136px;
+}
+img#babushka_prize1{
+    left: 98px;
+}
+img#babushka_prize2{
+    left: 60px;
+}
+img#babushka_prize3{
+    left: 22px;
+}
+
+.show{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+div#BADiv{
+    top: 221px;
+    left: 432px;
+    width: 135px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+}

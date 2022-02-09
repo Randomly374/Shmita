@@ -1,0 +1,266 @@
+
+span.new_bubble_span{
+    position: absolute;
+    display: block;
+    direction: rtl;
+    font-size: 12px;
+}
+
+span.Bbird1{
+    max-width: 100px;
+    right: 48px;
+    top: 10px;
+}
+span.Bbird2{
+    max-width: 85px;
+    right: 15px;
+    top: 15px;
+}
+span.Bbird3{
+    max-width: 100px;
+    right: 43px;
+    top: 10px;
+}
+span.Bbird4{
+    max-width: 110px;
+    right: 20px;
+    top: 13px;
+}
+
+span.Bmouse1{
+    max-width: 100px;
+    right: 48px;
+    top: 10px;
+}
+span.Bmouse2{
+    max-width: 85px;
+    right: 22px;
+    top: 15px;
+}
+span.Bmouse3{
+    max-width: 100px;
+    right: 43px;
+    top: 10px;
+}
+span.Bmouse4{
+    max-width: 110px;
+    right: 20px;
+    top: 13px;
+}
+
+span.Bwindow1{
+    max-width: 100px;
+    right: 21px;
+    top: 14px;
+    transform: rotateY(180deg);
+    font-size: 10px;
+}
+span.Bwindow2{
+    max-width: 53px;
+    right: 24px;
+    top: 7px;
+    font-size: 10px;
+}
+span.Bwindow3{
+    max-width: 100px;
+    right: 24px;
+    top: 12px;
+    font-size: 10px;
+}
+
+img.bubble_img_window{
+    opacity: 0.7;
+}
+
+/*
+    div.full_bird{
+        position: absolute;
+        height: 80px;
+        width: 81px;
+        top: 70px;
+        left: 607px;
+    }
+*/
+
+div.bird_bubble1{
+    top: 28px;
+    left: 460px;
+    width: 157px;
+    height: 73px;
+}
+div.bird_bubble2{
+    top: 3px;
+    left: 600px;
+    width: 100px;
+    height: 78px;
+}
+div.bird_bubble3{
+    top: 55px;
+    left: 466px;
+    width: 157px;
+    height: 73px;
+}
+div.bird_bubble4{
+    top: 0px;
+    left: 506px;
+    width: 157px;
+    height: 110px;
+}
+
+div.bird_bubble1:hover{
+    transform: scale(1.5);
+}
+div.bird_bubble2:hover{
+    transform: scale(1.5);
+}
+div.bird_bubble3:hover{
+    transform: scale(1.5);
+}
+div.bird_bubble4:hover{
+    transform: scale(1.5);
+}
+
+/*
+    div.mouse_lair{
+        width: 80px;
+        left: 152px;
+        top: 452px;
+    }
+*/
+
+div.mouse_bubble1{
+    width: 157px;
+    left: 45px;
+    top: 390px;
+    height: 73px;
+}
+div.mouse_bubble2{
+    width: 108px;
+    left: 161px;
+    top: 355px;
+    height: 78px;
+}
+div.mouse_bubble3{
+    width: 157px;
+    left: 45px;
+    top: 420px;
+    height: 73px;
+}
+div.mouse_bubble4{
+    width: 157px;
+    left: 86px;
+    top: 344px;
+    height: 110px;
+}
+
+div.mouse_bubble1:hover{
+    transform: scale(1.5);
+}
+div.mouse_bubble2:hover{
+    transform: scale(1.5);
+}
+div.mouse_bubble3:hover{
+    transform: scale(1.5);
+}
+div.mouse_bubble4:hover{
+    transform: scale(1.5);
+}
+
+
+div.window_bubble1{
+    width: 80px;
+    left: 34px;
+    top: 24px;
+    height: 40px;
+    transform: rotateY(180deg);
+}
+div.window_bubble2{
+    width: 80px;
+    left: 12px;
+    top: -4px;
+    height: 40px;
+}
+div.window_bubble3{
+    width: 80px;
+    left: 13px;
+    top: 44px;
+    height: 40px;
+    transform: rotate(-30deg);
+}
+
+div.window_bubble1:hover{
+    transform: rotateY(180deg) scale(1.5);
+}
+div.window_bubble2:hover{
+    transform: scale(1.5);
+}
+div.window_bubble3:hover{
+    transform: rotate(-30deg) scale(1.5);
+}
+
+span.Bhbird1{
+    max-width: 100px;
+    right: 48px;
+    top: 10px;
+}
+span.Bhbird3{
+    max-width: 100px;
+    right: 43px;
+    top: 10px;
+}
+span.Bhmouse2{
+    max-width: 85px;
+    right: 29px;
+    top: 16px;
+}
+
+
+div.hbird_bubble1{
+    top: 12px;
+    left: 413px;
+    width: 157px;
+    height: 73px;
+}
+
+div.hbird_bubble3{
+    top: 55px;
+    left: 407px;
+    width: 157px;
+    height: 73px;
+}
+
+div.hbird_bubble1:hover{
+    transform: scale(1.5);
+}
+div.hbird_bubble3:hover{
+    transform: scale(1.5);
+}
+
+div.hmouse_bubble1{
+    width: 157px;
+    left: 45px;
+    top: 390px;
+    height: 73px;
+}
+div.hmouse_bubble2{
+    width: 136px;
+    left: 17px;
+    top: 339px;
+    height: 78px;
+}
+
+div.hmouse_bubble1:hover{
+    transform: scale(1.5);
+}
+div.hmouse_bubble2:hover{
+    transform: scale(1.5);
+}
+
+/*
+        לא סתם הפסוקים בתורה המתארים את מצוות השבת ואת מצוות השמיטה דומים.
+
+        בשתי המצוות אנו עוצרים ממירוץ החיים אחר פרנסה וחומר, ומשקיעים את זמננו בדברים החשובים באמת.
+
+        עיקרון זה מיושם גם במקומות אחרים, למשל מורים ומרצים יוצאים לשנת שבתון.
+
+*/

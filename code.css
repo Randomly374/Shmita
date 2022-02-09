@@ -1,0 +1,102 @@
+/* @keyframes tv_blow_up{
+    0%{
+        left: -330px;
+        transform: scale(0.01);
+    }
+    100%{
+        left: 0px;
+        transform: scale(1);
+    }
+}
+
+@keyframes tv_blow_down{
+    0%{
+        left: 0px;
+        transform: scale(1);
+    }
+    99%{
+        left: -330px;
+        transform: scale(0.01);
+    }
+    100%{
+        display: none;
+    }
+} */
+
+@keyframes CGanswer{
+    0%{
+        transform: scale(1) translate(0px, 0px) rotateZ(0deg);
+    }
+    40%{
+        transform: scale(1.2) translate(0px, 0px) rotateZ(20deg);
+    }
+    60%{
+        transform: scale(0.8) translate(0px, 0px) rotateZ(-10deg);
+    }
+    80%{
+        transform: scale(1.1) translate(0px, 0px) rotateZ(5deg);
+    }
+    80%{
+        transform: scale(1) translate(0px, 0px) rotateZ(0deg);
+    }
+}
+div#code_game{
+    overflow: hidden;
+    display: none;
+    width: 1002px;
+    height: 590px;
+}
+div.CGnumber{
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+}
+div.CGnumber:hover{
+    filter: saturate(400%);
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+div.CGnumber:active{
+    filter: saturate(800%);
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+img.code_answer{
+    border-radius: 100%;
+    display: none;
+    position: absolute;
+    left: 450px;
+    width: 37px;
+}
+img.code_answer:hover{
+    filter: brightness(1.5);
+    cursor: pointer;
+}
+img.code_answer:active{
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+img.CAright{
+    outline-color: green;
+    outline-width: 5px;
+    outline-style: ridge;
+}
+img.CAwrong{
+    outline-color: red;
+    outline-width: 5px;
+    outline-style: ridge;
+    transform: scale(1) rotateZ(0deg);
+    transition: transform 0.5s;
+}
+img.CAfocused{
+    outline-color: yellow;
+    outline-width: 5px;
+    outline-style: ridge;
+    transform: scale(1.1) rotateZ(10deg);
+    transition: transform 0.5s;
+}
+img.CAanimate{
+    animation: CGanswer;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}

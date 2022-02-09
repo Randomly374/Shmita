@@ -1,0 +1,2271 @@
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: gisha;
+                src: url("fonts/gisha.ttf");
+            }
+            body{
+                font-family: gisha;
+            }
+            @keyframes whatsapp_show{
+                0% {
+                    border: 1px solid red;
+                    transform: translate(0px, 0px);
+                }
+                50% {
+                    border: 3px solid orange;
+                    transform: translate(-2px, -2px);
+                }
+                100% {
+                    border: 1px solid red;
+                    transform: translate(0px, 0px);
+                }
+            }
+            @keyframes mouse_eyes{
+                0% {
+                    opacity: 0;
+                }
+                40% {
+                    opacity: 0;
+                }
+                60% {
+                    opacity: 1;
+                }
+                80% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes camera_blip{
+                0% {
+                    opacity: 0;
+                }
+                40% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                70% {
+                    opacity: 1;
+                }
+                80% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes drop_of_water{
+                0% {
+                    top: 2px;
+                    left: 63px;
+                    width: 2px;
+                }
+                40% {
+                    top: 4px;
+                    left: 63px;
+                    width: 6px;
+                }
+                99% {
+                    top: 115px;
+                    width: 6px;
+                    opacity: 1;
+                }
+                100%{
+                    top: 115px;
+                    width: 6px;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes wrong_answer{
+                0%{
+                    background-color: none;
+                    opacity: 0;
+                }
+                50%{
+                    background-color: red;
+                    opacity: 0.6;
+                }
+                100%{
+                    background-color: none;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes go_off{
+                0%{
+                    filter: sepia(80%) hue-rotate(-40deg) saturate(500%);
+                }
+                49%{
+                    filter: sepia(100%) hue-rotate(-40deg) saturate(500%);
+                }
+                50%{
+                    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+                }
+                99%{
+                    filter: sepia(80%) hue-rotate(190deg) saturate(500%);
+                }
+                100%{
+                    filter: sepia(80%) hue-rotate(-40deg) saturate(500%);
+                }
+            }
+
+            @keyframes disappear{
+                0%{
+                    opacity: 1;
+                    display: block;
+                }
+                99%{
+                    opacity: 0;
+                }
+                100%{
+                    display: none;
+                }
+            }
+
+            @keyframes SYSAD{
+                0%{
+                    opacity: 1;
+                    display: block;
+                }
+                70%{
+                    opacity: 1;
+                    display: block;
+                }
+                99%{
+                    opacity: 0;
+                }
+                100%{
+                    display: none;
+                }
+            }
+
+            @keyframes tv_start{
+                0%{
+                    top: 50%;
+                    left: 50%;
+                    width: 5px;
+                    height: 5px;
+                    background-color: white;
+                    border: 1px solid whitesmoke;
+                    border-radius: 100px;
+                }
+                8%{
+                    top: 50%;
+                    left: 0%;
+                    width: 100%;
+                    height: 1px;
+                    background-color: white;
+                    border: 3px solid whitesmoke;
+                    border-radius: 20px;
+                }
+                100%{
+                    top: 0%;
+                    left: 0%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: whitesmoke;
+                    border: 0px;
+                    border-radius: 0px;
+                }
+            }
+
+            @keyframes agri_wrong_answer{
+                0%{
+                    background-color: rgba(72, 164, 192, 0.3);
+                }
+                50%{
+                    background-color: rgba(226, 155, 21, 0.5);
+                }
+                100%{
+                    background-color: rgba(72, 164, 192, 0.3);
+                }
+            }
+
+            @keyframes TD_blow_up{
+                0%{
+                    left: 430px;
+                    top: -30px;
+                    transform: scale(0.01);
+                }
+                100%{
+                    left: 0px;
+                    top: 0px;
+                    transform: scale(1);
+                }
+            }
+            @keyframes TD_blow_down{
+                0%{
+                    left: 0px;
+                    top: 0px;
+                    transform: scale(1);
+                }
+                100%{
+                    left: 430px;
+                    top: -30px;
+                    transform: scale(0.01);
+                }
+            }
+
+            @keyframes tv_blow_up{
+                0%{
+                    left: -330px;
+                    transform: scale(0.01);
+                }
+                100%{
+                    left: 0px;
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes tv_blow_down{
+                0%{
+                    left: 0px;
+                    transform: scale(1);
+                }
+                99%{
+                    left: -330px;
+                    transform: scale(0.01);
+                }
+                100%{
+                    display: none;
+                }
+            }
+
+            @keyframes title_slide_down{
+                0%{
+                    transform: translate(0px, -1500px);
+                }
+                100%{
+                    transform: translate(0px, 0px);
+                }
+            }
+
+            @keyframes title_slide_up{
+                0%{
+                    transform: translate(0px, 0px);
+                }
+                99%{
+                    transform: translate(0px, -1500px);
+                }
+                100%{
+                    display: none;
+                }
+            }
+
+            @keyframes title_slide_down_winner{
+                0%{
+                    transform: translate(0px, 1500px);
+                }
+                100%{
+                    transform: translate(0px, 70px);
+                }
+            }
+
+            @keyframes title_slide_up_winner{
+                0%{
+                    transform: translate(0px, 70px);
+                }
+                100%{
+                    transform: translate(0px, 1500px);
+                }
+            }
+
+            @keyframes title_slide_down_calender{
+                0%{
+                    transform: translate(0px, -1500px);
+                }
+                100%{
+                    transform: translate(0px, 70px);
+                }
+            }
+
+            @keyframes title_slide_up_calender{
+                0%{
+                    transform: translate(0px, 70px);
+                }
+                100%{
+                    transform: translate(0px, -1500px);
+                }
+            }
+
+            @keyframes title_slide_down_geo{
+                0%{
+                    transform: scale(0.5) translate(0px, -1500px);
+                }
+                100%{
+                    transform: scale(0.5) translate(0px, -100px);
+                }
+            }
+
+            @keyframes title_slide_up_geo{
+                0%{
+                    transform: scale(0.5) translate(0px, -100px);
+                }
+                100%{
+                    transform: scale(0.5) translate(0px, -1500px);
+                }
+            }
+
+            @keyframes title_slide_down_sidur{
+                0%{
+                    transform: translate(0px, -1500px) rotateY(180deg);
+                }
+                100%{
+                    transform: translate(0px, 70px) rotateY(180deg);
+                }
+            }
+
+            @keyframes title_slide_up_sidur{
+                0%{
+                    transform: translate(0px, 70px) rotateY(180deg);
+                }
+                99%{
+                    transform: translate(0px, -1500px) rotateY(180deg);
+                }
+                100%{
+                    display: none;
+                }
+            }
+
+            @keyframes grow{
+                0%{
+                    filter: grayscale(80%);
+                    transform: scale(0.1);
+                }
+                100%{
+                    filter: grayscale(0%);
+                    transform: scale(1.1);
+                }
+            }
+
+            @keyframes fall{
+                0%{
+                    
+                }
+                100%{
+                    top: 400px;
+                }
+            }
+
+            audio{
+                display: none;
+            }
+            div{
+                position: absolute;
+            }
+            div#full_screen{
+                overflow: hidden;
+                width: 1002px;
+                height: 590px;
+            }
+            div.games_div{
+                opacity: 1;
+                z-index: 3;
+                display: none;
+                overflow: hidden;
+                width: 1002px;
+                height: 590px;
+            }
+            div.title_div{
+                z-index: 5;
+                display: none;
+                overflow: hidden;
+                width: 1002px;
+                height: 590px;
+            }
+            div.TD_blow_up{
+                animation: TD_blow_up;
+                animation-duration: 1.5s;
+                animation-iteration-count: 1;
+            }
+            div.TD_blow_down{
+                animation: TD_blow_down;
+                animation-duration: 1.5s;
+                animation-iteration-count: 1;
+            }
+            img.title_img{
+                width: 650px;
+                top: -70px;
+                left: 175px;
+            }
+            img.TDVBackground{
+                display: none;
+            }
+            video.TDVideo{
+                position: absolute;
+                display: none;
+                width: 568px;
+                top: 100px;
+                left: 144px;
+            }
+            video.IGVideo{
+                position: absolute;
+                width: 850px;
+                top: 69px;
+                left: 61px;
+                z-index: 5;
+            }
+            img.title_slide_down{
+                transform: translate(0px, -1500px);
+                animation: title_slide_down;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_down_winner{
+                transform: translate(0px, 1500px);
+                animation: title_slide_down_winner;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_down_calender{
+                transform: translate(0px, -1500px);
+                animation: title_slide_down_calender;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_down_geo{
+                transform: scale(0.5) translate(0px, -1500px);
+                animation: title_slide_down_geo;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+            
+            img.title_slide_down_sidur{
+                transform: translate(0px, -1500px) rotateY(180deg);
+                animation: title_slide_down_sidur;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_up{
+                animation: title_slide_up;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_up_winner{
+                transform: translate(0px, 70px);
+                animation: title_slide_up_winner;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_up_calender{
+                transform: translate(0px, 100px);
+                animation: title_slide_up_calender;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_up_geo{
+                transform: scale(0.5) translate(0px, 100px);
+                animation: title_slide_up_geo;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            img.title_slide_up_sidur{
+                transform: translate(0px, 70px) rotateY(180deg);
+                animation: title_slide_up_sidur;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+            }
+
+            .DISAPPEAR{
+                animation: 1 disappear 1s;
+            }
+                    /*--- PHONE STYLES ---*/
+            div#phone{
+                /* display: none; */
+                width: 300px;
+                left: 350px;
+            }
+            img#screen{
+                z-index: -1;
+            }
+            div#whatsapp{
+                transform: translate(0px, 0px);
+                width: 38px;
+                height: 38px;
+                left: 220px;
+                top: 223px;
+                background-color: none;
+                border: 1px solid red;
+                border-radius: 10px;
+                animation: whatsapp_show;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+            div#whatsapp:hover{
+                background-color: rgba(65, 196, 156, 0.596);
+            }
+            div.bubble_div{
+                top: 95px;
+                left: 33px;
+                width: 240px;
+                height: 100px;
+            }
+            img.bubble{
+                z-index: -1;
+            }
+            span#bubble_span{
+                display: block;
+                margin-right: 20px;
+                margin-top: 5px;
+                font-size: 18px;
+                direction: rtl;
+                z-index: 1;
+            }
+            img#mini_stage{
+                width: 220px;
+                top: 80px;
+                left: 5px;
+                z-index: 1;
+            }
+            img{
+                position: absolute;
+                overflow: hidden;
+                width: 100%;
+            }
+                    /* -- SIXTH YEAR STYLES -- */
+            div.stage{
+                overflow: hidden;
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
+            div#seventh_year{
+                display: none;
+                /* display: block; */
+            }
+            img.monitor{
+                width: 1000px;
+                z-index: -1;
+            }
+
+            img#free{
+                position: absolute;
+                bottom: 65px;
+                left: -1px;
+                width: 105px;
+                z-index: -1;
+            }
+
+            img.year_sign_arrow{
+                z-index: 5;
+                top: 70px;
+                left: 80px;
+                width: 300px;
+            }
+            img.SYSAD{
+                animation: SYSAD;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+            }
+                    /* -- Mouse lair -- */
+            div.mouse_lair{
+                width: 80px;
+                left: 152px;
+                top: 452px;
+            }
+            div.ME{
+                z-index: 1;
+                position: absolute;
+                left: 50px;
+                top: 13px;
+                width: 20px;
+                height: 5px;
+                opacity: 0;
+                animation: mouse_eyes;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            div.eye{
+                position: absolute;
+                background-color: white;
+                border-radius: 100%;
+                box-shadow: white 1px 1px 1px 1px;
+                width: 1px;
+                height: 1px;
+            }
+            div.LE{
+                left: 2px;
+                top: 2px;
+            }
+            div.RE{
+                left: 12px;
+                top: 2px;
+            }
+            div.mouse_massage_div{
+                width: 120px;
+                direction: rtl;
+            }
+
+            span.bubble_span{
+                display: block;
+                position: absolute;
+                top: 12px;
+                max-width: 73px;
+                z-index: 1;
+                left: 7px;
+                font-size: 14px;
+            }
+                    /* -- camera blip -- */
+            div.CAM{
+                z-index: 1;
+                position: absolute;
+                left: 132px;
+                top: 117px;
+                width: 1px;
+                height: 1px;
+                background-color: red;
+                box-shadow: red 1px 1px 1px 1px;
+                border-radius: 100%;
+                opacity: 0;
+                animation: camera_blip;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            div.cam7_div{
+                left: 95px;
+                top: 75px;
+                width: 64px;
+                height: 51px;
+                cursor: pointer;
+            }
+            div.cam7_div:hover{
+                background-color: rgba(255, 0255, 255, 0.2);
+            }
+                    /* -- Owner Sign -- */
+            div.sign{
+                top: 155px;
+                left: 10px;
+                width: 90px;
+            }
+            img.sign_request{
+                position: absolute;
+                width: 18px;
+                height: 18px;
+            }
+            img.SBR{
+                width: 70px;
+                top: 38px;
+                left: 13px;
+            }
+            img#SBR7{
+                width: 90px;
+                top: 38px;
+                left: 2px;
+            }
+                    /* -- television screen -- */
+            div.television{
+                top: 190px;
+                width: 150px;
+                left: 138px;
+            }
+            div.inner_tv{
+                width: 140px;
+                height: 175px;
+                top: 5px;
+                left: 5px;
+                background-color: black;
+                overflow: hidden;
+            }
+            div#inner_tv7{
+                display: none;
+            }
+            div.tv_start{
+                animation: tv_start;
+                animation-iteration-count: 1;
+                animation-duration: 1.3s;
+            }
+            div.inner_tv_no_signal{
+                direction: ltr;
+                width: 63px;
+                height: 16px;
+                top: 70px;
+                left: 34px;
+                padding-top: 4px;
+                padding-left: 3px;
+                color: white;
+                background-color: blue;
+                border: 3px solid white;
+                border-radius: 6px;
+            }
+            img.inner_tv_white_noise{
+                width: 100%;
+                height: 100%;
+            }
+            h3.agri_game_title{
+                position: absolute;
+                top: 0px;
+                right: 6px;
+                max-width: 140px;
+                font-size: 11px;
+                direction: rtl;
+            }
+            div.tv_full_screen{
+                display: none;
+                height: 100%;
+                left: 0px;
+                width: 100%;
+                top: 0px;
+                z-index: 3;
+            }
+            img.TVIfull{
+                height: 579px;
+                left: 307px;
+                width: 390px;
+            }
+            div.blow_up{
+                display: block;
+                animation: tv_blow_up;
+                animation-iteration-count: 1;
+                animation-duration: 1s;
+            }
+            div.blow_down{
+                display: block;
+                animation: tv_blow_down;
+                animation-iteration-count: 1;
+                animation-duration: 1s;
+            }
+                            /* -- agriculture game -- */
+                    .agriculture_game_button{
+                        position: absolute;
+                        width: 63px;
+                        height: 68px;
+                        background-color: transparent;
+                        border: 0px;
+                    }
+                    .agriculture_game_button:hover{
+                        background-color: rgba(72, 164, 192, 0.3);
+                    }
+                    .agriculture_game_button:active{
+                        background-color: rgba(40, 240, 40, 0.5);
+                    }
+                    .agriculture_game_button:disabled{
+                        background-color: rgba(255, 255, 255, 0.5);
+                    }
+
+                    .agriculture_game_button_focused{
+                        position: absolute;
+                        width: 63px;
+                        height: 68px;
+                        background-color: rgba(66, 185, 221, 0.5);
+                        border: 0px;
+                    }
+
+                    .agriculture_game_button_cant{
+                        position: absolute;
+                        width: 63px;
+                        height: 68px;
+                        background-color: rgba(165, 21, 16, 0.5);
+                        border: 0px;
+                    }
+
+                    .agriculture_game_button_can{
+                        position: absolute;
+                        width: 63px;
+                        height: 68px;
+                        background-color: rgba(48, 236, 31, 0.5);
+                        border: 0px;
+                    }
+
+                    .agri_wrong{
+                        animation: agri_wrong_answer;
+                        animation-iteration-count: 1;
+                        animation-duration: 0.5s;
+                    }
+                    span.agri_game_writing{
+                        position: absolute;
+                        top: 55px;
+                        right: 360px;
+                        max-width: 260px;
+                        direction: rtl;
+                        display: block;
+                        font-size: 18px;
+                    }
+
+                    .agri_7_answer{
+                        position: absolute;
+                        width: 65px;
+                    }
+                    .agri_7_answer:hover{
+                        transform: scale(0.9);
+                        filter: sepia(50%) hue-rotate(300deg) saturate(200%);
+                    }
+                    /* -- window -- */
+            div.window{
+                top: 190px;
+                width: 150px;
+                left: 300px;
+            }
+            div.window_Y6_hover{
+                z-index: 4;
+                transform: scale(2);
+            }
+            div.window_inner{
+                width: 100%;
+                height: 100%;
+            }
+            div.outside_barrier{
+                top: 25px;
+                width: 126px;
+                left: 12px;
+                height: 96px;
+                overflow: hidden;
+            }
+            div.request_div{
+                width: 75px;
+                height: 20px;
+            }
+            img#outside{
+                display: none;
+                height: 96px;
+                width: 140px;
+                top: 0px;
+                left: -11px;
+            }
+                    /* -- plant -- */
+            div.plant{
+                top: 475px;
+                right: 0px;
+                width: 100px;
+                height: 102.76px;
+            }
+                    /* -- glass -- */
+            div.glass{
+                width: 20px;
+                z-index: 1;
+            }
+            div.glass:hover{
+                cursor: grab;
+            }
+            div#glass6{
+                top: 390px;
+                left: 390px;
+            }
+            div#glass7{
+                top: 265px;
+                left: 830px;
+            }
+                    /* -- crates --*/
+            div.crates {
+                width: 310px;
+                height: 290px;
+                top: 212px;
+                left: 556px;
+            }
+            img.CRI{
+                cursor: pointer;
+            }
+            img#tenth_arrow{
+                display: none;
+                width: 150px;
+                top: 260px;
+                left: 650px;
+                opacity: 0.9;
+                transition: opacity 1s;
+                pointer-events: none;
+            }
+                            /* -- produce -- */
+                img.produce{
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                }
+                img.produce:hover{
+                    cursor: grab;
+                }
+                    /* -- clock --*/
+            div.clock {
+                width: 60px;
+                height: 60px;
+                top: 195px;
+                left: 465px;
+            }
+                    /* -- water drops -- */
+            div.water{
+                width: 70px;
+                height: 120px;
+                left: 780px;
+                top: 178px;
+                z-index: -1;
+            }
+            img#stream6{
+                width: 60px;
+                left: 14px;
+                top: 0px;
+            }
+            img.drop{
+                top: 2px;
+                left: 63px;
+                width: 2px;
+                animation: drop_of_water;
+                animation-duration: 0.8s;
+                animation-iteration-count: infinite;
+            }
+            img#puddle{
+                top: 115px;
+                left: 44px;
+                width: 40px;
+            }
+                    /* -- cheese -- */
+            div.cheese{
+                width: 60px;
+                height: 26px;
+                top: 375px;
+                left: 546px;
+                z-index: 1;
+            }
+            div.cheese:hover{
+                cursor: pointer;
+            }
+                    /* -- remote -- */
+            div.remote{
+                width: 60px;
+                height: 37px;
+                top: 406px;
+                left: 275px;
+                transform: rotateZ(30deg);
+            }
+            div.remote:hover{
+                cursor: pointer;
+            }
+                    /* -- abandoned sign -- */
+            div.abandoned{
+                width: 100px;
+                height: 137px;
+                top: 397px;
+                left: 877px;
+                z-index: -1;
+            }
+                    /* -- tenth crate -- */
+            div.tenth{
+                width: 100px;
+                height: 59px;
+                top: 500px;
+                left: 680px;
+            }
+            div.full_hover{
+                cursor: grab;
+            }
+                .in_tenth{
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    top: -5px;
+                    z-index: 1;
+                }
+                .wrong_produce{
+                    border-radius: 100%;
+                    animation: wrong_answer;
+                    animation-duration: 1s;
+                    animation-iteration-count: 1;
+                }
+            img.TCS{
+                width: 80px;
+                height: 20px;
+                top: 25px;
+                left: 7px;
+                z-index: 2;
+            }
+            img.TCIback{
+                z-index: 0;
+            }
+            img.TCIfront{
+                z-index: 2;
+                top: 16px;
+            }
+                         /* -- tenth signs --*/
+                img.tenth_sign_on_ground{
+                    position: absolute;
+                    width: 80px;
+                    height: 20px;
+                }
+                    /* -- alarm -- */
+            div.alarm{
+                width: 65px;
+                height: 65px;
+                top: 67px;
+                left: 807px;
+                border-radius: 100%;
+            }
+            img.alarmI{
+                top: 13px;
+                left: 13px;
+                width: 35px;
+                height: 45px;
+            }
+            div.go_off{
+                animation: go_off;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+                    /* -- degrees -- */
+            div.degrees{
+                width: 24px;
+                height: 19px;
+                top: 343px;
+                left: 898px;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            img.degreesI{
+                top: 4px;
+            }
+            div#darkness{
+                /* display: none; */
+                width: 100%;
+                z-index: 4;
+            }
+                        /* ---------------------------- EXCLUSIVE SEVENTTH YEAR STYLES ---------------------------- */
+                /* -- darkness calander -- */
+            div.calender_seventh_year{
+                width: 95px;
+                height: 50px;
+                top: 105px;
+                left: 5px;
+            }
+            div.dark_filter{
+                width: 100%;
+                height: 100%;
+                display: none;
+                z-index: 3;
+                filter: brightness(0.2);
+            }
+            img.calender_seventh_yearI{
+                transform: rotateX(30deg) rotateY(40deg);
+            }
+            img.calender_seventh_yearI:hover{
+                transform: rotateX(30deg) rotateY(40deg);
+                cursor: pointer;
+            }
+                    /* -- scales -- */
+            div.scales{
+                top: 375px;
+                left: 338px;
+                width: 110px;
+                height: 53px;
+            }
+                    /* -- frozen icicles -- */
+            div.icicles{
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            img#iciclesI{
+                top: 175px;
+                left: 167px;
+                width: 700px;
+                height: 329px;
+            }
+                    /* -- wall crates -- */
+            div.wall_crates{
+                top: 460px;
+                left: 0px;
+                width: 140px;
+                height: 81px;
+            }
+                    /* -- cheese piece -- */
+            img.cheese_piece{
+                position: absolute;
+                width: 30px;
+            }
+                    /* -- family photo -- */
+            div.family{
+                top: 215px;
+                left: 600px;
+                width: 55px;
+                height: 39px;
+            }
+                    /* -- books -- */
+            div.books{
+                top: 403px;
+                left: 625px;
+                width: 146px;
+                height: 44.20px;
+            }
+                    /* -- babushka dolls -- */
+            div.babushka{
+                top: 433px;
+                left: 501px;
+                width: 20px;
+                height: 33.5px;
+            }
+                    /* -- sidur shabbat -- */
+            div.sidur{
+                top: 260px;
+                left: 559px;
+                width: 30px;
+                height: 44px;
+            }
+
+            div#remote7{
+                top: 417px;
+                left: 798px;
+            }
+
+                    /* -- pioneers poster -- */
+            div.pioneers{
+                width: 108px;
+                top: 216px;
+                left: 877px;
+            }
+            img.pioneersI:hover{
+                cursor: pointer;
+            }
+                    /** -- ending code door -- */
+            div.code_door_div{
+                display: none;
+                top: 311px;
+                left: 104px;
+                width: 24px;
+                height: 31px;
+            }
+            img.code_doorI{
+                filter: brightness(1.3);
+            }
+            img.code_doorI:hover{
+                filter: brightness(1.7);
+            }
+            div.code_door_div:hover{
+                cursor: pointer;
+            }
+            div#sound_effects{
+                display: none;
+            }
+
+        </style>
+        <link rel="stylesheet" href="babushka.css">
+        <link rel="stylesheet" href="hefker.css">
+        <link rel="stylesheet" href="mirror.css">
+        <link rel="stylesheet" href="bird.css">
+        <link rel="stylesheet" href="shabbat.css">
+        <link rel="stylesheet" href="bubbles.css">
+        <link rel="stylesheet" href="phone.css">
+        <link rel="stylesheet" href="weights.css">
+        <link rel="stylesheet" href="code.css">
+        <link rel="stylesheet" href="israel.css">
+    </head>
+    <body>
+        <input type="button" value="sixth year" onclick="change_year(false)">
+        <input type="button" value="seventh year" onclick="change_year()">
+        <input type="button" value="bubble_show" onclick="bubble_button_click()">
+        <input type="button" value="change_phone" onclick="change_phone()">
+        <input type="button" value="babushka" onclick="dispatch()">
+        <input type="button" value="add weight" onclick="add_weight_button()">
+        <input type="button" value="play" onclick="play_game()">
+        <input type="radio" value="hefker_game" name="radio_games" class="radio_games"> hefker
+        <input type="radio" value="tv_full_screen6" name="radio_games" class="radio_games"> tv6
+        <input type="radio" value="tv_full_screen7" name="radio_games" class="radio_games"> tv7
+        <input type="radio" value="shabbat_game" name="radio_games" class="radio_games"> shabbat
+        <input type="radio" value="babushka_game" name="radio_games" class="radio_games"> babushka
+        <input type="radio" value="israel_game" name="radio_games" class="radio_games"> israel
+        <input type="radio" value="code_game" name="radio_games" class="radio_games"> code
+        <div id="full_screen">
+            <div id="sound_effects">
+                <audio id="garage_door_SE">
+                    <source src="שמע/Garage Door Opening sound effect (128 kbps).mp3" type="audio/mpeg">
+                </audio>
+                <audio id="mouse_squeak_SE">
+                    <source src="שמע/Cartoon Mouse Squeak - SOUND EFFECTS (HD) (128 kbps).mp3" type="audio/mpeg">
+                </audio>
+                <audio id="bird_chirp_SE">
+                    <source src="שמע/Cartoon Bird Chirp- Sound Effect( HD) (128 kbps).mp3" type="audio/mpeg">
+                </audio>
+                <audio id="human_speak_SE">
+                    <source src="שמע/Cartoon Man Mumbling - Sound Effect (HD) (128 kbps).mp3" type="audio/mpeg">
+                </audio>
+                <audio id="phone_dying_SE">
+                    <source src="שמע/Samsung Low battery Sound Effect (128 kbps).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+                                <!-- *** PHONE ELEMENTS *** -->
+            <!--
+                <div id="phone">
+                    <audio id="whatsapp_message_SE">
+                        <source src="שמע/mp3-now.com - WhatsApp Sending Message Sound Effect.mp3" type="audio/mpeg">
+                    </audio>
+                    <img id="screen" src="מסודר/SH 001 a.png">
+                    <div id="whatsapp"></div>
+                </div>
+            -->
+            <div id="phone_before_6_year" class="phone">
+                <audio id="whatsapp_message_SE">
+                    <source src="שמע/mp3-now.com - WhatsApp Sending Message Sound Effect.mp3" type="audio/mpeg">
+                </audio>
+                <img id="screen6" class="phone_screen" src="מסודר/SH 001 a.png">
+                <div id="whatsapp"></div>
+            </div>
+            <div id="phone_before_7_year" class="phone">
+                <!--
+                    <audio id="whatsapp_message_SE">
+                        <source src="שמע/mp3-now.com - WhatsApp Sending Message Sound Effect.mp3" type="audio/mpeg">
+                    </audio>
+                -->
+                <img id="screen7" class="phone_screen" src="מסודר/SH 001 e.png">
+                <div id="phone_bubble_div_7" class="phone_bubble_div">
+                    <img id="phone_bubble_img_7" class="phone_bubble_img" src="מסודר/SH 001 d.png">
+                    <video id="WAVideo" controls class="WAVideo">
+                        <source src="video/WA Video before 7.mp4" type="video/mp4">
+                    </video>
+                    <span id="phone_bubble_img_7_span" class="phone_bubble_span">שנה טובה!</span>
+                </div>
+            </div>
+                                <!-- *** SIXTH YEAR ELEMENTS *** -->
+            <div id="sixth_year" class="stage">
+                <audio controls id="water_drop_SE">
+                    <source src="שמע/mp3-now.com - Water Drop  Sound Effects.mp3" type="audio/mpeg">
+                </audio>
+                <img id="sixth_year_sign_arrow" class="year_sign_arrow" src="מסודר/SH 050 a.png">
+                <img id="monitor6" class="monitor" src="./מסודר/SH 000 Reka A.png">
+                <div id="CAM6" class="CAM"></div>
+
+                <div id="sign6" class="sign">
+                    <img id="SB6" class="sign SB" src="מסודר/SH 005 a.png">
+                    <img id="SBR6" class="sign SBR" src="מסודר/SH 005 c.png">
+                </div>
+
+                <div id="television6" class="television">
+                    <img id="TVS6" class="TVS" src="מסודר/מסך טלוויזיה/SH 025 c.png">
+                    <!--
+                        <div id="inner_tv6" class="inner_tv">
+                            <div id="inner_tv_no_signal6" class="inner_tv_no_signal" >NO SIGNAL</div>
+                        </div>
+                    -->
+                        <div id="inner_tv6" class="inner_tv">
+                            <img id="inner_tv_white_noise6" class="inner_tv_white_noise" src="./מסודר/מסך טלוויזיה/SH 040 b.png">
+                        </div>
+                </div>
+
+                <div id="window6" class="window">
+                    <div id="window_Y6" class="window_inner">
+                        <img id="WI6" class="WI" src="מסודר/SH 006 a.png">
+                        <div id="outside_barrier" class="outside_barrier">
+                            <img id="outside" src="מסודר/אנשים בחלון/SH 021 a.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Mouse_Lair6" class="mouse_lair">
+                    <img id="MLI6" class="MLI" src="./מסודר/SH 002 b.png">
+                    <!-- 
+                        <div id="ME6" class="ME">
+                            <div id="LE6" class="eye LE"></div>
+                            <div id="RE6" class="eye RE"></div>
+                        </div>
+                    -->
+                </div>
+
+                <div id="full_bird6" class="full_bird">
+                    <img id="bird_house6" class="bird_house" src="מסודר/SH 046 a.png">
+                    <img id="bird6" class="bird" src="מסודר/SH 046 b.png">
+                </div>
+
+                <div id="plant6" class="plant">
+                    <img id="PI6" class="plant" src="מסודר/SH 008 a.png">
+                </div>
+
+                <div id="glass6" class="glass">
+                    <img id="GI6" class="GI" src="מסודר/SH 011 a.png">
+                </div>
+
+                <div id="crates6" CLASS="crates">
+                    <!-- <img id="CFI6" class="CFI" src="מסודר/SH 022 u.png"> -->
+                </div>
+
+                <div id="cheese6" class="cheese">
+                    <img id="CHI6" class="CHI" src="מסודר/SH 003 a.png">
+                </div>
+
+                <div id="clock6" class="clock">
+                    <img id="CLI6" class="CLI" src="מסודר/SH 017 e.png">
+                </div>
+
+                <div id="water6" class="water">
+                    <img id="stream6" src="מסודר/SH 024 a.png">
+                    <img id="drop1" class="drop" src="מסודר/SH 024 e.png">
+                    <img id="puddle" src="מסודר/SH 024 b.png">
+                </div>
+
+                <div id="remote6" class="remote">
+                    <img id="RI6" class="RI" src="מסודר/SH 009 a.png">
+                </div>
+
+                <div id="abandoned_sign6" class="abandoned">
+                    <img id="ASI6" class="ASI" src="מסודר/SH 007 a.png">
+                </div>
+
+                <img id="tenth_arrow" src="מסודר/SH 050 c.png">
+                <div id="tenth_crate6" class="tenth">
+                    <img id="TCIB6" class="TCIback" src="מסודר/SH 022 t.png">
+                    <img id="TCIF6" class="TCIfront" src="מסודר/SH 022 v.png">
+                    <img id="TCS6" class="TCS" src="מסודר/שינויים/SH 027 a.png">
+                </div>
+
+                <div id="alarm6" class="alarm">
+                    <img id="AlarmI6" class="alarmI" src="מסודר/SH 018 a.png">
+                </div>
+
+                <div id="mirror6" class="mirror" >
+                    <img id="mirrorI6" class="mirrorI" src="מסודר/SH 015 a.png">
+                    <div id="mirror_inner6" class="mirror_inner">
+
+                    </div>
+                </div>
+
+                <div id="degrees6" class="degrees">
+                    <img id="degreesI6" class="degreesI" src="מסודר/SH 012 a.png">
+                </div>
+
+            </div>
+                                <!-- *** SEVENTH YEAR ELEMENTS *** -->
+            <div id="seventh_year" class="stage">
+                <div id="dark_filter7" class="dark_filter">
+                    <img id="dark_filterI7" src="מסודר/SH 035 a.png">
+                </div>
+                <img id="seventh_year_sign_arrow" class="year_sign_arrow" src="מסודר/SH 050 b.png">
+                <div id="darkness" class="go_off">
+                    <img id="darkness_img" src="מסודר/SH 035 a.png">
+                    <div id="calender_seventh_year" class="calender_seventh_year">
+                        <img id="calender_seventh_yearI" class="calender_seventh_yearI" src="מסודר/SH 019 b.png" onclick="start_seventh_year()">
+                    </div>
+                </div>
+                <img id="monitor7" class="monitor" src="./מסודר/SH 000 Reka B.png">
+                <div id="CAM7" class="CAM"></div>
+
+                <div id="cam7_div" class="cam7_div"></div>
+
+                <div id="sign7" class="sign">
+                    <img id="SB7" class="sign SB" src="מסודר/SH 005 a.png">
+                    <img id="SBR7" class="sign SBR" src="מסודר/SH 005 d.png">
+                </div>
+
+                <div id="television7" class="television">
+                    <img id="TVS7" class="TVS" src="מסודר/מסך טלוויזיה/SH 025 b.png">
+                    <div id="inner_tv7" class="inner_tv">
+                        <img id="inner_tv_white_noise7" class="inner_tv_white_noise" src="./מסודר/מסך טלוויזיה/white noise.gif">
+                    </div>
+                </div>
+
+                <div id="window7" class="window">
+                    <div id="window_Y7" class="window_inner">
+                        <img id="WI7" class="WI" src="מסודר/SH 006 b.png">
+                    </div>
+                </div>
+
+                <div id="Mouse_Lair7" class="mouse_lair">
+                    <img id="MLI7" class="MLI" src="./מסודר/SH 002 a.png">
+                    <div id="ME7" class="ME">
+                        <div id="LE7" class="eye LE"></div>
+                        <div id="RE7" class="eye RE"></div>
+                    </div>
+                </div>
+
+                <div id="full_bird7" class="full_bird">
+                    <img id="bird_house7" class="bird_house" src="מסודר/SH 046 a.png">
+                    <img id="bird7" class="bird" src="מסודר/SH 046 b.png">
+                </div>
+
+                <div id="plant7" class="plant">
+                    <img id="PI7" class="plant" src="מסודר/SH 008 b.png">
+                </div>
+
+                <div id="glass7" class="glass">
+                    <img id="GI7" class="GI" src="מסודר/SH 011 c.png">
+                </div>
+
+                <div id="cheese7" class="cheese">
+                    <img id="CHI7" class="CHI" src="מסודר/SH 003 a.png">
+                </div>
+
+                <div id="alarm7" class="alarm">
+                    <img id="AlarmI7" class="alarmI" src="מסודר/SH 018 a.png">
+                </div>
+
+                <div id="mirror7" class="mirror" >
+                    <img id="mirrorI7" class="mirrorI" src="מסודר/SH 015 a.png">
+                    <div id="mirror_inner7" class="mirror_inner">
+                        
+                    </div>
+                </div>
+
+                <div id="degrees7" class="degrees">
+                    <img id="degreesI7" class="degreesI" src="מסודר/SH 012 b.png">
+                </div>
+
+                <div id="clock7" class="clock">
+                    <img id="CLI7" class="CLI" src="מסודר/SH 017 e.png">
+                </div>
+                
+                <div id="code_door_div" class="code_door_div" onclick="code_game_click()">
+                    <img id="code_doorI7" class="code_doorI" src="מסודר/DOOR CODE.png">
+                </div>
+
+                <div id="scales7" class="scales">
+                    <img id="scalesI7" class="scalesI" src="מסודר/SH 014 a.png">
+                    <div id="scales_sides"></div>
+                    <h3 id="scale_number" class="scale_number">-- 38 -></h3>
+                </div>
+
+                <div id="icicles7" class="icicles">
+                    <img id="iciclesI" src="מסודר/SH 010 a.png">
+                </div>
+
+                <div id="wall_crates7" class="wall_crates">
+                    <img id="wall_cratesI7" class="wall_cratesI" src="מסודר/SH 004.png">
+                </div>
+
+                <div id="crates7" class="crates">
+                    <!-- <img id="CFI6" class="CFI" src="מסודר/SH 022 u.png"> -->
+                </div>
+
+                <div id="family_photo7" class="family">
+                    <img id="FFI7" class="FFI" src="מסודר/SH 032 a.png">
+                </div>
+
+                <div id="books7" class="books">
+                    <img id="booksI7" class="booksI" src="מסודר/SH 032 b.png" onclick="show_geo()">
+                </div>
+
+                <div id="babushka7" class="babushka">
+                    <img id="babushkaI7" class="babushkaI" src="מסודר/SH 016 a.png">
+                </div>
+
+                <div id="sidur7" class="sidur">
+                    <img id="sidurI7" class="sidurI" src="מסודר/SH 031 a.png">
+                </div>
+
+                <div id="remote7" class="remote">
+                    <img id="RI7" class="RI" src="מסודר/SH 009 a.png">
+                </div>
+
+                <div id="pioneers7" class="pioneers">
+                    <img id="pioneersI7" class="pioneersI" src="מסודר/jalutzim.png">
+                </div>
+            </div>
+            <div id="games_div" class="games_div">
+                <div id="tv_full_screen6" class="tv_full_screen">
+                    <img id="TVIfull6" class="TVIfull" src="מסודר/מסך טלוויזיה/SH 037 b.png">
+                </div>
+
+                <div id="tv_full_screen7" class="tv_full_screen">
+                    <img id="TVIfull7" class="TVIfull" src="מסודר/מסך טלוויזיה/SH 037 g.png">
+                </div>
+
+                <div id="hefker_game" class="hefker_game">
+                    <img id="bird_hefker" class="bird" src="מסודר/SH 046 b.png">
+                    <img id="hefker_title" class="hefker_title" src="מסודר/SH 045b.png" onclick="disapear()">
+                    <img id="hefker_background" class="background" src="מסודר/SH 036 e.png">
+                    <img id="hefker_sign" class="hefker_sign" src="מסודר/SH 007 b.png">
+                    <span id="hefker_instructions" class="instructions">
+                        לחצו על הפרי/ירק המתאימים וכוונו את הארגז בעזרת החיצים/מקשים כך שייקלוט את הייבול המצוי למטה!
+                    </span>
+                    <img id="mouse_lair_hefker" class="mouse_lair_hefker" src="מסודר/SH 002 b.png">
+                    <img id="target_for_capture" class="target_for_capture">
+                    <div id="player_crate" class="player_crate">
+                        <img id="player_crate_img" class="player_crate_inner" src="מסודר/SH 036 a.png">
+                        <img id="player_crate_img_outer" class="player_crate_outer" src="מסודר/SH 036 a2.png">
+                    </div>
+                    <img id="left_arrow" class="arrow" src="מסודר/SH 036 c.png" onmousedown="hefker_arrow_down(this)">
+                    <img id="right_arrow" class="arrow" src="מסודר/SH 036 b.png" onmousedown="hefker_arrow_down(this, false)">
+                </div>
+
+                <div id="shabbat_game">
+                    <img id="SREKA" src="מסודר/SH 052.png">
+                </div>
+
+                <div id="babushka_game">
+                    <img id="babushka_background">
+                    <div id="ADIV0" class="ADIV" onclick="answer_click(0)"></div>
+                    <div id="ADIV1" class="ADIV" onclick="answer_click(1)"></div>
+                    <div id="ADIV2" class="ADIV" onclick="answer_click(2)"></div>
+                    <div id="ADIV3" class="ADIV" onclick="answer_click(3)"></div>
+                    <img id="babushka_prize0" class="babushka_prize" src="מסודר/SH 016 c.png">
+                    <img id="babushka_prize1" class="babushka_prize" src="מסודר/SH 016 a.png">
+                    <img id="babushka_prize2" class="babushka_prize" src="מסודר/SH 016 d.png">
+                    <img id="babushka_prize3" class="babushka_prize" src="מסודר/SH 016 b.png">
+                </div>
+
+                <div id="israel_game" class="israel_game">
+                    <video id="IGVideo" controls class="IGVideo">
+                        <source src="video/חושבים חקלאות חושבים ישראל - משרד החקלאות.mp4" type="video/mp4">
+                    </video>
+                    <img id="IGBackground" src="מסודר/totzeret israel 2.png">
+                    <img id="magnify_glass" class="MGlass" src="מסודר/magdelet.png">
+                </div>
+
+                <div id="code_game">
+                    <img id="CGBackground" src="מסודר/SH 080.png">
+                </div>
+            </div>
+            <div id="title_div" class="title_div" onclick="title_disappear()">
+                <img id="title_img" class="title_img">
+                <img id="TDVBackground" class="TDVBackground" src="מסודר/SH 051.png">
+                <video id="TDVideo" controls class="TDVideo">
+                    <source src="video/תרגום סרטון שמיטה.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <script type="text/javascript" charset="UTF-8" src="israel.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="code.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="phone.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="mirror.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="functions.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="hefker.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="listeners.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="bird.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="shabbat.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="babushka.js"></script>
+        <script type="text/javascript" charset="UTF-8" src="weights.js"></script>
+        <script>
+            class changing_img{
+                constructor(div, img, srcs, movement_flag = false){
+                    this.div = document.getElementById(div);
+                    this.img = document.getElementById(img);
+                    this.srcs = srcs;
+                    this.index = 1;
+                    let change_event = new Event("img_changed", {index: 1});
+                    this.div.onclick = () => {
+                        if(!tenth_game_event.flag){
+                            return;
+                        }
+                        let temp_index = this.index;
+                        do{
+                            this.index = (Math.floor(Math.random() * (this.srcs.length - 1)) % (this.srcs.length - 1)) + 1;
+                        }while(temp_index === this.index);
+                        if(this.srcs[this.index] === EMPTY){
+                            this.img.style.display = "none";
+                        }else{
+                            this.img.style.display = "block";
+                            this.img.src = this.srcs[this.index];
+                        }
+                        change_event.index = this.index;
+                        this.img.dispatchEvent(change_event);
+                    }
+                    if(movement_flag === true){
+                        dragElement(this.div);
+                    }
+                }
+            }
+            
+            const MONITOR = document.getElementById("monitor");
+            
+                                /* -- START OF FIRST ROOM STAGE! -- */
+            
+            const EYES = document.getElementById("ME7");
+            const ML = document.getElementById("Mouse_Lair7");/*@the mouse div*/
+            const MLI = document.getElementById("MLI7"); /*@the mouse lair image*/
+            const EMPTY = "none";
+            const MLSrc = [
+                "./מסודר/SH 002 a.png",
+                "./מסודר/SH 002 b.png",
+                "./מסודר/SH 002 c.png"
+            ];
+            
+            const C6_WIDTHS = [
+                79, 107, 77,
+                95, 78, 80,
+                97, 78, 74,
+                96, 70, 71,
+                66, 89, 64, 79,
+                88, 70, 69, 70
+            ];
+            const C6_HEIGHTS = [
+                40, 41, 40,
+                43, 46, 41,
+                46, 40, 45,
+                45, 46, 42,
+                35, 46, 32, 45,
+                60, 45, 45, 41
+            ];
+            const C6_TOPS = [
+                0, 0, 0,
+                46, 45, 51,
+                91, 98, 92,
+                142, 140, 143,
+                245, 186, 200, 192,
+                220, 236, 235, 192
+            ];
+            const C6_LEFTS = [
+                3, 80, 197,
+                170, 78, 0,
+                1, 101, 176,
+                55, 161, 239,
+                237, 221, 74, 138,
+                141, 68, 1, 5
+            ];
+            const CRATES6 = document.getElementById("crates6");
+            const CRATE = "./מסודר/SH 022 ";
+            const LENGTH = 20;
+            const PRODUCE = [
+                "./מסודר/ייבול/SH 020 a.png",
+                "./מסודר/ייבול/SH 020 b.png",
+                "./מסודר/ייבול/SH 020 c.png",
+                "./מסודר/ייבול/SH 020 d.png",
+                "./מסודר/ייבול/SH 020 e.png",
+                "./מסודר/ייבול/SH 020 f.png",
+                "./מסודר/ייבול/SH 020 g.png",
+                "./מסודר/ייבול/SH 020 h.png",
+                "./מסודר/ייבול/SH 020 i.png",
+                "./מסודר/ייבול/SH 020 j.png",
+                "./מסודר/ייבול/SH 020 k.png",
+                "./מסודר/ייבול/SH 020 l.png",
+                "./מסודר/ייבול/SH 020 m.png",
+                "./מסודר/ייבול/SH 020 n.png",
+                "./מסודר/ייבול/SH 020 o.png",
+                "./מסודר/ייבול/SH 020 p.png",
+                "./מסודר/ייבול/SH 020 q.png",
+                "./מסודר/ייבול/SH 020 r.png",
+                "./מסודר/ייבול/SH 020 s.png",
+            ];
+
+            const TENTH_BUBBLES = [
+                [
+                    {text: "התורה מחייבת מעשר מהחקלאי לעניים.", id: "BB1", class: "bird", kind: 1, img: "מסודר/SH 030 a.png"}
+                ],
+                [
+                    {text: "מצוות מעשרות מחייבת רק חקלאים.", id: "BB2", class: "bird", kind: 2, img: "מסודר/SH 030 b.png"},
+                    {text: "הרבה שאינם חקלאים נוהגים לתת מעשר כספים.", id: "MB2", class: "mouse", kind: 2, img: "מסודר/SH 030 b.png"}
+                ],
+                [
+                    {text: "הרבה חברות מממשות את החסד והערבות בתרומה לקהילה", id: "BB3", class: "bird", kind: 3, img: "מסודר/SH 030 c.png"},
+                    {text: "הצדקה הכי גדולה היא דווקא לתת עבודה לעני, ולא כסף או אוכל.", id: "MB4", class: "mouse", kind: 4, img: "מסודר/SH 030 d.png"}
+                ]
+            ];
+            var T_B_I = -1;
+            var IN_TENTH = [null, null, null];
+            var in_tenth_index = 0;
+            const PRODUCE_SIZE = 50;
+            var starter = 'a';
+            var matches_to_win_tenth_game = 4;
+            let tenth_game_event = new CustomEvent("game_start", {detail: {next_game: "tenth", massage_location: "mouse", massage: "./מסודר/SH 030 g.png", year: "sixth_year"}, flag: false});
+            let tenth_game_title = new CustomEvent("show_title", {detail: { src: "./מסודר/SH 053 .png", next_game_event: tenth_game_event, className: "title_slide_down_calender"}});
+            CRATES6.onmouseover = () => {
+                document.getElementById("tenth_arrow").style.opacity = 0.0;
+            };
+            CRATES6.onmouseleave = () => {
+                document.getElementById("tenth_arrow").style.opacity = "";
+            };
+            for(let i = 0; i < matches_to_win_tenth_game - 1; i++){
+                let sign_img = document.createElement("img");
+                sign_img.id = "tenth_sign" + i;
+                sign_img.className = "tenth_sign_on_ground";
+                sign_img.src = "מסודר/שינויים/SH 027 a.png";
+                sign_img.style.top = 500 + i * 12 + "px";
+                sign_img.style.left = 800 + i * 10 + "px";
+                document.getElementById("sixth_year").appendChild(sign_img);
+            }
+            for(let i = 0; i < LENGTH; i++){
+                let img = document.createElement("img");
+                img.className = "CRI";
+                img.id = "CRI6_" + i;
+                img.style.width = C6_WIDTHS[i] + "px";
+                img.style.height = C6_HEIGHTS[i] + "px";
+                img.style.top = C6_TOPS[i] + "px";
+                img.style.left = C6_LEFTS[i] + "px";
+                img.src = CRATE + starter + ".png";
+                CRATES6.appendChild(img);
+                starter = String.fromCharCode(starter.charCodeAt(0) + 1);
+                if(i !== LENGTH - 1){
+                    img.onmousedown = (e) => {
+                        if(!tenth_game_event.flag){
+                            return;
+                        }
+                        e = e || window.event;
+                        let produce;
+                        if(document.getElementById("prod:" + i)){
+                            produce = document.getElementById("prod:" + i);
+                        }else{
+                            produce = document.createElement("img");
+                            produce.id = "prod:" + i;
+                            produce.className = "produce";
+                            produce.src = PRODUCE[i];
+                            produce.style.top = e.ClientY;
+                            produce.style.left = e.ClientX;
+                        }
+                        document.getElementById("sixth_year").appendChild(produce);
+                        e.preventDefault();
+                        var pos1, pos2, pos3, pos4;
+                        // get the mouse cursor position at startup:
+                        pos3 = e.clientX;
+                        pos4 = e.clientY;
+                        produce.style.left = (pos3 - 25).toString() + "px";
+                        produce.style.top = (pos4 - 25).toString() + "px";
+                        document.onmouseup = closeDragElement;
+                        // call a function whenever the cursor moves:
+                        document.onmousemove = elementDrag;
+                        let mir_shown_id = "mirror6";
+                        let mir_shown = document.getElementById(mir_shown_id);
+                        if(mir_shown){
+                            mir_shown.dispatchEvent(new CustomEvent("mirror_drag_start", {detail: {moving: produce}}));
+                        }
+                        function elementDrag(e) {
+                            if(mir_shown){
+                                mir_shown.dispatchEvent(new CustomEvent("mirror_drag_move", {detail: {moving: produce}}));
+                            }
+                            e = e || window.event;
+                            e.preventDefault();
+                            // calculate the new cursor position:
+                            pos1 = pos3;
+                            pos2 = pos4;
+                            // console.log(pos1, pos2, pos3, pos4, e.ClientX, e.ClientY);
+                            //console.log(produce.offsetTop, produce.offsetLeft);
+                            pos3 = e.clientX;
+                            pos4 = e.clientY;
+                            // set the element's new position:
+                            let top = (pos2 - 25);
+                            let left = (pos1 - 25);
+                            produce.style.top = top.toString() + "px";
+                            produce.style.left = left.toString() + "px";
+                        }
+
+                        function closeDragElement() {
+                            /*
+                                goal:   width: 100px;
+                                        height: 59px;
+                                        top: 500px;
+                                        left: 680px;
+                                    ==>>
+                                        left top: (680, 500)
+                                        right bottom: (780, 559) 
+                            */
+                            if(mir_shown){
+                                mir_shown.dispatchEvent(new CustomEvent("mirror_drag_stop", {detail: {moving: produce}}));
+                            }
+                            const GOAL_L_T = {x: 680, y: 500};
+                            const GOAL_R_B = {x: 780, y: 559};
+                            if(check_if_in(produce, PRODUCE_SIZE, PRODUCE_SIZE, GOAL_L_T, GOAL_R_B)){
+                                    let in_tenth = document.createElement("img");
+                                    if(IN_TENTH[in_tenth_index] !== null){
+                                        document.getElementById("tenth_crate6").removeChild(IN_TENTH[in_tenth_index]);
+                                    }
+                                    in_tenth.id = "prod_in_tenth:" + in_tenth_index + ":" + i;
+                                    in_tenth.src = PRODUCE[i];
+                                    in_tenth.className = "in_tenth";
+                                    document.getElementById("tenth_crate6").appendChild(in_tenth);
+                                    in_tenth.style.left = 30 * in_tenth_index + "px";
+                                    let this_index = in_tenth_index;
+                                    IN_TENTH[in_tenth_index] = in_tenth;
+                                    in_tenth_index = (in_tenth_index + 1) % IN_TENTH.length;
+                                    let tmp_flag = true;
+                                    let elmnt = document.getElementById("tenth_crate6");
+                                    for(let i = 0; i < IN_TENTH.length; i++){
+                                        if(IN_TENTH[i] === null){
+                                            elmnt.className = "tenth";
+                                            tmp_flag = false;
+                                        }
+                                    }
+                                    if(tmp_flag){
+                                        elmnt.className = "tenth full_hover";
+                                    }
+                                    in_tenth.onclick = () => {
+                                        in_tenth_index = this_index;
+                                    };
+                                    in_tenth.ondblclick = () => {
+                                        document.getElementById("tenth_crate6").removeChild(in_tenth);
+                                        IN_TENTH[this_index] = null;
+                                        elmnt.className = "tenth";
+                                    };
+                                }
+                            document.getElementById("sixth_year").removeChild(produce);
+                            document.onmouseup = null;
+                            document.onmousemove = null;
+                        }
+                    };
+                }
+            }
+
+            document.getElementById("tenth_crate6").onmousedown = (e) => {
+                let elmnt = document.getElementById("tenth_crate6");
+                for(let i = 0; i < IN_TENTH.length; i++){
+                    if(IN_TENTH[i] === null){
+                        return;
+                    }
+                }
+                let mir_shown_id = "mirror6";
+                let mir_shown = document.getElementById(mir_shown_id);
+                if(mir_shown){
+                    mir_shown.dispatchEvent(new CustomEvent("mirror_drag_start", {detail: {moving: elmnt}}));
+                }
+                var pos1 , pos2 , pos3 , pos4;
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+                function elementDrag(e) {
+                    if(mir_shown){
+                        mir_shown.dispatchEvent(new CustomEvent("mirror_drag_move", {detail: {moving: elmnt}}));
+                    }
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new position:
+                    let top = (elmnt.offsetTop - pos2);
+                    let left = (elmnt.offsetLeft - pos1);
+                    elmnt.style.top = top.toString() + "px";
+                    elmnt.style.left = left.toString() + "px";
+                }
+
+                function closeDragElement() {
+                    /*                  -- window:   
+                                    top: 190px;
+                                    width: 126px;
+                                    left: 300px;
+                                        --inner window
+                                    top: 25px;
+                                    width: 126px;
+                                    left: 12px;
+                                    height: 96px;
+                            ==>>
+                                    L_T: (312, 215)
+                                    R_B: (438, 311)
+                    */
+                    if(mir_shown){
+                        mir_shown.dispatchEvent(new CustomEvent("mirror_drag_stop", {detail: {moving: elmnt}}));
+                    }
+                    let L_T = {x: 312, y: 215};
+                    let R_B = {x: 438, y: 311};
+                    if(check_if_in(elmnt, 100, 59, L_T, R_B)){
+                        //console.log("CHECKING TENTH CONTENT");
+                        let tenth_giving_flag = true;
+                                //--------- comparing tenth crate content with askers' plead:
+                        for(let i = 0; i < IN_TENTH.length; i++){
+                            if(sign_requests[i] == null){
+                                tenth_giving_flag = false;
+                                break;
+                            }
+                            prod_asked = sign_requests[i].id.split(":")[2];
+                            prod_received = IN_TENTH[i].id.split(":")[2];
+                            if(prod_asked !== prod_received){
+                                let wrong_animation = document.createElement("div");
+                                wrong_animation.className = "in_tenth wrong_produce";
+                                wrong_animation.style.top = IN_TENTH[i].style.top;
+                                wrong_animation.style.left = IN_TENTH[i].style.left;
+                                elmnt.appendChild(wrong_animation);
+                                in_tenth_index = 0;
+                                setTimeout(() => {
+                                    elmnt.removeChild(wrong_animation);
+                                }, 1000);
+                                tenth_giving_flag = false;
+                            }
+                        }
+                        if(tenth_giving_flag){
+                            if(++T_B_I > 0){
+                                for(let k = 0; k < TENTH_BUBBLES[(T_B_I - 1)].length; k++){
+                                    remove_text_bubble(TENTH_BUBBLES[(T_B_I - 1)][k], document.getElementById("sixth_year"));
+                                }
+                            }else{
+                                document.dispatchEvent(new Event("remove_divs"));
+                            }
+                            if(T_B_I < TENTH_BUBBLES.length){
+                                let S_T = 0;
+                                for(let k = 0; k < TENTH_BUBBLES[T_B_I].length; k++){
+                                    if(k > 0){
+                                        S_T += TENTH_BUBBLES[T_B_I][k - 1].text.length * 60;
+                                    }
+                                    setTimeout(() => {
+                                        add_text_bubble(TENTH_BUBBLES[T_B_I][k], document.getElementById("sixth_year"));
+                                    }, S_T);
+                                }
+                            }
+                            if(--matches_to_win_tenth_game === 0){
+                                //-------   WON THE GAME
+                                elmnt.className = "tenth DISAPPEAR";
+                                document.getElementById("tenth_arrow").className += "DISAPPEAR";
+                                document.getElementById("outside_barrier").className = "outside_barrier DISAPPEAR";
+                                document.dispatchEvent(new Event("remove_divs"));
+                                document.dispatchEvent(new CustomEvent("show_title", {detail: { src: "./מסודר/SH 033 a1.png", after_tenth: true, next_game_event: new CustomEvent("check_for_finish", {detail: { finish: "tenth"}})}}));
+                                setTimeout(() => {
+                                    elmnt.style.display = "none";
+                                    document.getElementById("outside_barrier").style.display = "none";
+                                    document.getElementById("tenth_arrow").style.display = "none";
+                                }, 1000);
+                                
+                            }else{
+                                //-------   ANOTHER ASKER
+                                document.getElementById("tenth_sign" + (matches_to_win_tenth_game - 1)).className = "tenth_sign_on_ground disappear";
+                                setTimeout(() => {
+                                    document.getElementById("sixth_year").removeChild(document.getElementById("tenth_sign" + (matches_to_win_tenth_game - 1)));
+                                }, 1000);
+                                document.getElementById("window_Y6").dispatchEvent(new Event("click"));
+                                elmnt.className = "tenth";
+                            }
+                            for(let i = 0; i < IN_TENTH.length; i++){
+                                elmnt.removeChild(IN_TENTH[i]);
+                                IN_TENTH[i] = null;
+                            }
+                        }
+                    }
+                    elmnt.style.top = "500px";
+                    elmnt.style.left = "680px";
+                    
+                    in_tenth_index = 0;
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            };
+
+            
+
+            // var MLSrcIndex = 0;
+            // ML.onclick = () => {
+            //     MLSrcIndex = (MLSrcIndex + 1) % 3;
+            //     MLI.src = MLSrc[MLSrcIndex];
+            //     EYES.style.display = (MLSrcIndex === 0 ? "block" : "none");
+            // }
+            var focused_img = null;
+            // let Television_CI = new changing_img("television6", "TVS6", [
+            //     "מסודר/מסך טלוויזיה/SH 025 b.png",
+            //     "מסודר/מסך טלוויזיה/SH 025 c.png",
+            //     "מסודר/מסך טלוויזיה/SH 025 d.png",
+            //     "מסודר/מסך טלוויזיה/SH 025 e.png"
+            // ]);
+
+            let remote6 = document.getElementById("remote6");
+            var tv_agriculture_game_sequence = null;
+            var agriculture_game_index = 0;
+            var agriculture_game_changer = null;
+            const tops_agriculture = [107, 107, 107, 107, 107, 175, 175, 175, 175, 175];
+            const lefts_agriculture = [346, 409, 472, 535, 598, 346, 409, 472, 535, 598];
+            remote6.onclick = () => {
+                let inner_tv6 = document.getElementById("inner_tv6");
+                document.getElementById("inner_tv_white_noise6").style.display = "none";
+                let tv_start6 = document.createElement("div");
+                tv_start6.className = "tv_start";
+                inner_tv6.appendChild(tv_start6);
+                document.getElementById("TVS6").src = "מסודר/מסך טלוויזיה/SH 025 d.png";
+                setTimeout(() => {
+                    inner_tv6.removeChild(tv_start6);
+                    inner_tv6.style.display = "none";
+                    let agriculture_game_title = document.createElement("h3");
+                    agriculture_game_title.id = "agri_game_title6";
+                    agriculture_game_title.className = "agri_game_title";
+                    agriculture_game_title.innerText = "הזורעים בדמעה, ברינה יקצרו";
+                    document.getElementById("television6").appendChild(agriculture_game_title);
+                    document.getElementById("TVS6").src = "מסודר/מסך טלוויזיה/SH 037 small.png";
+                    document.getElementById("TVS6").onmouseenter = () => {
+                        document.getElementById("TVS6").style.cursor = "pointer";
+                    };
+                    document.getElementById("TVS6").onmouseleave = () => {
+                        document.getElementById("TVS6").style.cursor = "auto";
+                    };
+                    document.getElementById("TVS6").onclick = () => {
+                        document.getElementById("games_div").className = "games_div blow_up";
+                        let tv_full_screen = document.getElementById("tv_full_screen6");
+                        tv_full_screen.style.display = "block";
+                        agriculture_game_setup(6,
+                        tops_agriculture,
+                        lefts_agriculture,
+                        [
+                            "יש בארוגה עשבים שוטים ואדמה מיותרת",
+                            "נותרו אבנים גדולות שצריך לסלק",
+                            "הארוגה עדיין לא ישרה",
+                            "כדי שהצמח יגדל טוב צריך גומות.",
+                            "את הזרעים מכניסים לגומות",
+                            "ממלאים את הגומות באדמה דשנה",
+                            "השקו היטב!",
+                            "מגנים על הצמח מפני מזיקים",
+                            "חשוב להמשיך ולהשקות את הצמח",
+                            "גיזום הצמח מאפשר צמיחה נכונה וצורה נאה!",
+                            ""
+                        ],
+                        [6, 3, 7, 2, 8, 4, 5, 0, 9, 1],
+                        ["מסודר/מסך טלוויזיה/SH 037 b.png",
+                            "מסודר/מסך טלוויזיה/SH 037 c.png",
+                            "מסודר/מסך טלוויזיה/SH 037 c2.png",
+                            "מסודר/מסך טלוויזיה/SH 037 d.png",
+                            "מסודר/מסך טלוויזיה/SH 037 e.png",
+                            "מסודר/מסך טלוויזיה/SH 037 e.png",
+                            "מסודר/מסך טלוויזיה/SH 037 f.png",
+                            "מסודר/מסך טלוויזיה/SH 037 g.png",
+                            "מסודר/מסך טלוויזיה/SH 037 h.png",
+                            "מסודר/מסך טלוויזיה/SH 037 i.png",
+                            "מסודר/מסך טלוויזיה/SH 037 j.png"
+
+                        ],
+                        tenth_game_title,
+                        document.getElementById("inner_tv6"));
+                        setTimeout(() => {
+                            let games_div = document.getElementById("games_div");
+                            games_div.className = "games_div";
+                            games_div.style.display = "block";
+                            games_div.dispatchEvent(new Event("games_div_shown"));
+                        }, 1000);
+                    };
+                }, 1300);
+                remote6.onclick = () => {};
+            }
+
+            let Window_CI6 = new changing_img("window_Y6", "outside", [
+                EMPTY,
+                "מסודר/אנשים בחלון/SH 021 a.png",
+                "מסודר/אנשים בחלון/SH 021 b.png",
+                "מסודר/אנשים בחלון/SH 021 c.png",
+                "מסודר/אנשים בחלון/SH 021 d.png",
+                "מסודר/אנשים בחלון/SH 021 e.png"
+            ]);
+
+            let window_Y6 = document.getElementById("window_Y6");
+            window_Y6.onmouseover = () => {
+                if(tenth_game_event.flag){
+                    window_Y6.className = "window_inner window_Y6_hover";
+                }
+            };
+            window_Y6.onmouseout = () => {
+                if(tenth_game_event.flag){
+                    window_Y6.className = "window_inner";
+                }
+            };
+
+            var sign_requests = [null, null, null];
+            document.getElementById("outside").addEventListener("img_changed", (e) => {
+                let sign = null;
+                if(!document.getElementById("request_div")) {
+                    sign = document.createElement("div");
+                    sign.id = "request_div";
+                    sign.className = "request_div";
+                    document.getElementById("outside_barrier").appendChild(sign);
+                }else{
+                    sign = document.getElementById("request_div");
+                }
+                for(let i = 0; i < sign_requests.length; i++){
+                    if(sign_requests[i] !== null){
+                        sign.removeChild(sign_requests[i]);
+                        sign_requests[i] = null;
+                    }
+                }
+                const window_bubbles = [
+                    null,
+                    {text: "אפשר כמה?", id: "WB1", class: "window", kind: 1, img: "מסודר/SH 030 c.png"},
+                    {text: "בבקשה מכם", id: "WB2", class: "window", kind: 2, img: "מסודר/SH 030 a.png"},
+                    {text: "תודה רבה", id: "WB3", class: "window", kind: 3, img: "מסודר/SH 030 c.png"},
+                    {text: "תזכו למצוות", id: "WB4", class: "window", kind: 2, img: "מסודר/SH 030 a.png"},
+                    {text: "תודה לכם!", id: "WB5", class: "window", kind: 3, img: "מסודר/SH 030 c.png"}
+                ];
+                for(let i = 1; i < window_bubbles.length; i++){
+                    if(document.getElementById("WB" + i)){
+                        remove_text_bubble({id: "WB" + i}, document.getElementById("outside_barrier"));
+                    }
+                }
+                add_text_bubble(window_bubbles[e.index], document.getElementById("outside_barrier"));
+
+                const locations = [
+                    null,
+                    {x: 20, y: 52, deg: -10},
+                    {x: 28, y: 32, deg: -22},
+                    {x: -3, y: 7, deg: -24},
+                    {x: 22, y: 28, deg: -20},
+                    {x: 7, y: 24, deg: -26}
+                ];
+                sign.style.left = locations[e.index].x + "px";
+                sign.style.top = locations[e.index].y + "px";
+                sign.style.transform = "rotate(" + locations[e.index].deg + "deg)";
+                for(let i = 0; i < 3; i++){
+                    let rand = Math.floor(Math.random() * PRODUCE.length) % PRODUCE.length;
+                    let img = document.createElement("img");
+                    img.id = "sign_request:" + i + ":" + rand;
+                    img.className = "sign_request";
+                    img.src = PRODUCE[rand];
+                    let dist = (e.index === 1) ? 13 : 18;
+                    img.style.left = i * dist;
+                    sign_requests[i] = img;
+                    sign.appendChild(img);
+                }
+            });
+                                                    //------------------------------------------ STRICTLY 7TH YEAR OBJECTS ------------------------
+            
+            const TOPS7 = [
+                87, 87, 
+                134, 
+                235, 235, 135
+            ];
+            const LEFTS7 = [
+                50, 170,
+                168,
+                30, 160, 55
+            ];
+            const WIDTHS7 = 95;
+            const HEIGHTS7 = [
+                50, 45,
+                50,
+                45, 45, 50
+            ];
+            for(let i = 0; i < TOPS7.length; i++){
+                let img = document.createElement("img");
+                img.id = "CI7_" + i;
+                img.className = "CI7";
+                img.style.top = TOPS7[i] + "px";
+                img.style.left = LEFTS7[i] + "px";
+                img.style.width = WIDTHS7 + "px";
+                img.style.height = HEIGHTS7[i] + "px";
+                img.src = "מסודר/SH 034 " + String.fromCharCode(("a".charCodeAt(0) + i)) + ".png";
+                document.getElementById("crates7").appendChild(img);
+            }
+
+            // let Window_CI7 = new changing_img("window_Y7", "WI7", [
+            //     "מסודר/SH 006 b.png",
+            //     "מסודר/SH 006 c.png",
+            //     "מסודר/SH 006 e.png"
+            // ]);
+
+            var alarm_src = false;
+            //var alarm7_interval = null;
+            var mouse_cheese = true;
+            const CHEESE_PIECE_SRC = "מסודר/SH 003 b.png";
+            document.getElementById("cheese7").onmouseover = () => {
+                add_text_bubble({text: "עשה טובה ותן ל'חבר'", id: "BB2", class: "bird", kind: 2, img: "מסודר/SH 030 b.png"}, document.getElementById("seventh_year"));
+            }
+            document.getElementById("cheese7").onmouseleave = () => {
+                remove_text_bubble({id: "BB2"}, document.getElementById("seventh_year"));
+            }
+            document.getElementById("cheese7").onmousedown = (e) => {
+                        let mir_shown = document.getElementById("mirror7");
+                        if(!mouse_cheese){
+                            return;
+                        }
+                        e = e || window.event;
+                        let cheese_piece = document.createElement("img");
+                        cheese_piece.id = "cheese_piece7";
+                        cheese_piece.className = "cheese_piece";
+                        cheese_piece.src = CHEESE_PIECE_SRC;
+                        cheese_piece.style.top = e.ClientY;
+                        cheese_piece.style.left = e.ClientX;
+                        document.getElementById("seventh_year").appendChild(cheese_piece);
+                        if(mir_shown){
+                            mir_shown.dispatchEvent(new CustomEvent("mirror_drag_start", {detail: {moving: cheese_piece}}));
+                        }
+                        e.preventDefault();
+                        var pos1, pos2, pos3, pos4;
+                        // get the mouse cursor position at startup:
+                        pos3 = e.clientX;
+                        pos4 = e.clientY;
+                        cheese_piece.style.left = (pos3 - 15).toString() + "px";
+                        cheese_piece.style.top = (pos4 - 10).toString() + "px";
+                        document.onmouseup = closeDragElement;
+                        // call a function whenever the cursor moves:
+                        document.onmousemove = elementDrag;
+                        function elementDrag(e) {
+                            if(mir_shown){
+                                mir_shown.dispatchEvent(new CustomEvent("mirror_drag_move", {detail: {moving: cheese_piece}}));
+                            }
+                            e = e || window.event;
+                            e.preventDefault();
+                            // calculate the new cursor position:
+                            pos1 = pos3;
+                            pos2 = pos4;
+                            // console.log(pos1, pos2, pos3, pos4, e.ClientX, e.ClientY);
+                            //console.log(produce.offsetTop, produce.offsetLeft);
+                            pos3 = e.clientX;
+                            pos4 = e.clientY;
+                            // set the element's new position:
+                            let top = (pos2 - 15);
+                            let left = (pos1 - 10);
+                            cheese_piece.style.top = top.toString() + "px";
+                            cheese_piece.style.left = left.toString() + "px";
+                        }
+
+                        function closeDragElement() {
+                            /*
+                                div.mouse_lair{
+                                    width: 80px;
+                                    left: 152px;
+                                    top: 452px;
+                                    height: 50.5px;
+                                }
+                                l1 = 152, t1 = 452, l2 = 232, t2 = 503
+                            */
+                            if(mir_shown){
+                               mir_shown.dispatchEvent(new CustomEvent("mirror_drag_stop", {detail: {moving: cheese_piece}}));
+                            }
+                            const GOAL_L_T = {x: 152, y: 452};
+                            const GOAL_R_B = {x: 232, y: 503};
+                            if(check_if_in(cheese_piece, PRODUCE_SIZE, PRODUCE_SIZE, GOAL_L_T, GOAL_R_B)){
+                                    document.getElementById("cheese7").onmouseover = null;
+                                    document.getElementById("cheese7").onmouseleave = null;
+                                    mouse_cheese = false;
+                                    set_mouse_animation();
+                                    setTimeout(() => {
+                                        document.getElementById("seventh_year").dispatchEvent(new CustomEvent("first_stage", {detail: {name: "mouse"}}));
+                                    }, 2000);
+                            }
+                    document.getElementById("seventh_year").removeChild(cheese_piece);
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            };
+
+            var glass7_flag = true;
+            /*
+                div.plant{
+                    top: 475px;
+                    right: 0px;
+                    width: 100px;
+                    height: 102.76px;
+                }
+                l1 = 902, t1 = 475, l2 = 1002, t2 = 578
+            */
+            document.getElementById("glass7").onmouseover = () => {
+                const G7BB = {text: "מזל ששמרנו מים בשנה שעברה", id: "BB3", class: "bird", kind: 3, img: "מסודר/SH 030 c.png"};
+                add_text_bubble(G7BB, document.getElementById("seventh_year"));
+                setTimeout(() => {
+                    add_text_bubble({text: "הצמח ממש מתייבש.", id: "MB1", class: "mouse", kind: 1, img: "מסודר/SH 030 a.png"}, document.getElementById("seventh_year"));
+                }, G7BB.text.length * 60);
+            };
+
+            document.getElementById("glass7").onmouseleave = () => {
+                remove_text_bubble({id: "BB3"}, document.getElementById("seventh_year"));
+                let iterator_index = 0;
+                let check_glass_interval = setInterval(() => {
+                    if(++iterator_index >= "מזל ששמרנו מים בשנה שעברה".length){
+                        clearInterval(check_glass_interval);
+                    }
+                    if(document.getElementById("MB1")){
+                        remove_text_bubble({id: "MB1"}, document.getElementById("seventh_year"));
+                    }
+                }, 60);
+            };
+
+            drag_and_goal(document.getElementById("glass7"), 30, 20, {x: 902, y: 475}, {x: 1002, y: 578}, new Event("win_glass"));
+
+            let sidurI = document.getElementById("sidurI7");
+            sidurI.onmouseover = () => {
+                sidurI.style.transform = "scale(3)";
+                sidurI.src = "מסודר/SH 031 b.png";
+            };
+            sidurI.onmouseleave = () => {
+                sidurI.style.transform = "scale(1)";
+                sidurI.src = "מסודר/SH 031 a.png";
+            };
+            sidurI.ondblclick = () => {
+                let TI = document.getElementById("title_img");
+                TI.src = "מסודר/SH 031 b.png";
+                title_show("title_slide_down_calender");
+                setTimeout(() => {
+                    TI.style.transform = "translate(0px, 70px)";
+                }, 2500);
+            }
+
+        </script>
+    </body>
+</html>

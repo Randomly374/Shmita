@@ -1,0 +1,48 @@
+
+
+div#shabbat_game{
+    z-index: 3;
+    display: none;
+    overflow: hidden;
+    width: 1002px;
+    height: 590px;
+    background-color: seashell;
+}
+
+div.puzzle_piece_outer{
+    width: 400px;
+    height: 86px;
+}
+div.puzzle_piece_inner{
+    width: 319px;
+    height: 86px;
+}
+div.connector{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgba(231, 235, 15, 0.8);
+}
+div.inner{
+    left: 0px;
+    top: 33px;
+}
+div.outer{
+    left: 383px;
+    top: 33px;
+}
+div.connected{
+    width: 702px;
+    height: 86px;
+}
+div.undo{
+    left: 357px;
+    width: 50px;
+    height: 86px;
+    background-color: rgba(221, 221, 214, 0.8);
+    z-index: 4;
+}
+div.undo:hover{
+    filter: brightness(0.5);
+    cursor: pointer;
+}

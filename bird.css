@@ -1,0 +1,33 @@
+div.full_bird{
+    position: absolute;
+    height: 80px;
+    width: 81px;
+    top: 76px;
+    left: 607px;
+}
+
+img.bird{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 28.89px;
+}
+
+img#bird_hefker{
+    position: absolute;
+    top: 73px;
+    left: 570px;
+    height: 30px;
+    width: 21.67px;
+    z-index: 3;
+}
+
+img.bird_house{
+    position: absolute;
+    display: none;
+    top: 10px;
+    left: 0px;
+    height: 70px;
+    width: 81.2px;
+}
